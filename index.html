@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Volunteer Form</title>
 </head>
 <body>
-    
+    <form action= "http://bloomingdale.sat.iit.edu/kbraidi/lab3formscript.php" method="POST">
+        <h1>Volunteer Form</h1>
+        <fieldset>
+            <legend><h2>My Info</h2></legend>
+      	    <p><label><strong>First Name:&emsp;</strong></label><input type="text" name="first_name_field" placeholder="First Name"></p>
+
+            <p><label><strong>Last Name:&emsp;</strong></label><input type="text" name="last_name_field" placeholder="Last Name"></p>
+
+            <p><label><strong>Phone Number:&emsp;</strong></label><input type="text" name="phone_field" placeholder="Valid Phone Number"></p>
+
+           <p><label><strong>Email Address:&emsp;</strong></label><input type="email" name="email_field" placeholder="Email Address"></p>
+
+            <div>
+                <label><strong>Gender:</strong></label>
+                <input type="radio" name="gender_field"  id="Male" value="Male">
+                <label for="Male">Male</label>
+                <input type="radio" name="gender_field" id="Female" value="Female">
+                <label for="Female">Female</label>
+              </div>
+            
+          <div>
+            <label><strong>Age:</strong></label>
+              <select name="age_field">
+                 <option value="under 18">Under 18</option>
+                 <option value="18-24">18-24</option>
+                 <option value="25-34">25-34</option>
+                 <option value="35-44">35-44</option>
+                 <option value="45-54">45-54</option>
+                 <option value="55-64">55-64</option>
+                 <option value="over 65">65 and over</option>
+              </select>
+          </div>
+        </fieldset>
+
+       <fieldset>
+           <legend><h2>My Availability</h2></legend>
+           <p><strong>Days Available:</strong></p>
+           <ul style="list-style: none;">
+             <li><input type="checkbox" name="available_field[]" value="Monday" ><label>Monday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Tuesday"><label>Tuesday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Wednesday"><label>Wednesday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Thursday"><label>Thursday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Friday"><label>Friday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Saturday"><label>Saturday</label></li>
+             <li><input type="checkbox" name="available_field[]" value="Sunday"><label>Sunday</label></li>
+           </ul>
+           <p><strong>Any Comments?</strong></p>
+           <textarea rows="10" cols="100" name="comments_field" placeholder="comment area."></textarea>
+       </fieldset>
+    <button type="submit" name="button">Send Me</button>
+    <input type="hidden" name="hidden_field" value="Olun-wen">
+  </form>
 </body>
 </html>
